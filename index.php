@@ -44,13 +44,55 @@
   // echo '<pre>';
   // echo $array_2[1][1];
 
-  $array_member = [
-    'name' => '伊藤',
-    'height' => 180,
-    'hobby' => 'サッカー'
-  ];
+  // $array_member = [
+  //   'name' => '伊藤',
+  //   'height' => 180,
+  //   'hobby' => 'サッカー'
+  // ];
 
   // echo $array_member['hobby'];
+
+  // echo '<pre>';
+  // var_dump($array_member);
+  // echo '<pre>';
+
+  // $array_member = [
+  //   '本田' => [
+  //     'height' => 188,
+  //     'hobby' => 'バスケ'
+  //   ], 
+  //   '香川' => [
+  //     'height' => 170,
+  //     'hobby' => '野球'
+  //   ]
+  // ];
+
+  // echo $array_member['香川']['height'];
+
+  $array_member = [
+    'class_1' => [
+      '本田' => [
+        'height' => 188,
+        'hobby' => 'バスケ'
+      ], 
+      '香川' => [
+        'height' => 170,
+        'hobby' => '野球'
+      ]
+    ],
+    'class_2' => [
+      '永田' => [
+        'height' => 181,
+        'hobby' => 'サッカー'
+      ], 
+      '伊藤' => [
+        'height' => 176,
+        'hobby' => '野球'
+      ]
+    ]
+  ];
+
+  echo $array_member['class_1']['香川']['hobby'];
 
   echo '<pre>';
   var_dump($array_member);
