@@ -32,16 +32,28 @@
   // const MAX = 10;
   // echo MAX;
 
-  $array_1 = ['あああ', 1, 2, 3];
+  // $array_1 = ['あああ', 1, 2, 3];
 
-  $array_2 = [
-    ['A', 'B', 'C'],
-    ['D', 'E', 'F']
+  // $array_2 = [
+  //   ['A', 'B', 'C'],
+  //   ['D', 'E', 'F']
+  // ];
+
+  // echo '<pre>';
+  // var_dump($array);
+  // echo '<pre>';
+  // echo $array_2[1][1];
+
+  $array_member = [
+    'name' => '伊藤',
+    'height' => 180,
+    'hobby' => 'サッカー'
   ];
 
+  // echo $array_member['hobby'];
+
   echo '<pre>';
-  var_dump($array);
+  var_dump($array_member);
   echo '<pre>';
-  echo $array_2[1][1];
 
 ?>
