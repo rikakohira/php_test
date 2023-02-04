@@ -98,10 +98,20 @@
   // var_dump($array_member);
   // echo '<pre>';
 
+  // $test_1 = 2;
+  // $test_2 = 3;
+  // $test_3 = $test_1 % $test_2;
 
-  $test_1 = 2;
-  $test_2 = 3;
-  $test_3 = $test_1 % $test_2;
+  // echo $test_3;
 
-  echo $test_3;
+  $height = '180';
+  
+
+  if ($height === 180){
+    echo '身長' . $height . 'cmです。';
+  } else{
+    echo '型が一致しません'; 
+  }
+
+
 ?>
