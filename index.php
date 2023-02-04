@@ -32,6 +32,16 @@
   // const MAX = 10;
   // echo MAX;
 
-  $array = [1, 2, 3];
-  echo $array[1];
+  $array_1 = ['あああ', 1, 2, 3];
+
+  $array_2 = [
+    ['A', 'B', 'C'],
+    ['D', 'E', 'F']
+  ];
+
+  echo '<pre>';
+  var_dump($array);
+  echo '<pre>';
+  echo $array_2[1][1];
+
 ?>
