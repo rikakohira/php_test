@@ -181,20 +181,54 @@
   //   $j++;
   // };
 
-  $date = '1';
-  switch($date){
-    case $date === 1:
-      echo '1です';
-      break;
-    case 2:
-      echo '2です';
-      break;
-    default:
-      echo 'その他';
+  // $date = '1';
+  // switch($date){
+  //   case $date === 1:
+  //     echo '1です';
+  //     break;
+  //   case 2:
+  //     echo '2です';
+  //     break;
+  //   default:
+  //     echo 'その他';
+  // }
+
+  function test(){
+    echo 'テスト';
   }
 
+  test();
 
+  echo '<br>';
 
+  function getComment($str){
+    echo $str;
+  }
 
+  getComment('hello');
 
+  echo '<br>';
+
+  function getNumberOFComment(){
+    return 5;
+  }
+
+  var_dump(getNumberOFComment());
+  echo '<br>';
+
+  echo getNumberOFComment();
+  echo '<br>';
+
+  $num = getNumberOFComment();
+  echo $num; 
+  echo '<br>';
+
+  function sumPrice($int_1, $int_2){
+    $int_3 = $int_1 + $int_2;
+    return $int_3;
+  }
+
+  $total = sumPrice(2, 3);
+  echo $total;
+  echo '<br>';
 ?>
