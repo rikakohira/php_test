@@ -157,30 +157,41 @@
   //   echo '<br>';
   // };
 
-  for($i = 0; $i < 10; $i++){
-    if($i === 5){
+  // for($i = 0; $i < 10; $i++){
+  //   if($i === 5){
+  //     break;
+  //   }
+  //   echo $i;
+  // };
+
+  // echo '<br>';
+
+  // for($i = 0; $i < 10; $i++){
+  //   if($i === 5){
+  //     continue;
+  //   }
+  //   echo $i;
+  // };
+
+  // echo '<br>';
+
+  // $j = 0;
+  // while($j < 5){
+  //   echo $j;
+  //   $j++;
+  // };
+
+  $date = '1';
+  switch($date){
+    case $date === 1:
+      echo '1です';
       break;
-    }
-    echo $i;
-  };
-
-  echo '<br>';
-
-  for($i = 0; $i < 10; $i++){
-    if($i === 5){
-      continue;
-    }
-    echo $i;
-  };
-
-  echo '<br>';
-
-  $j = 0;
-  while($j < 5){
-    echo $j;
-    $j++;
-  };
-
+    case 2:
+      echo '2です';
+      break;
+    default:
+      echo 'その他';
+  }
 
 
 
