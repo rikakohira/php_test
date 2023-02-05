@@ -104,14 +104,27 @@
 
   // echo $test_3;
 
-  $height = '180';
+  // $height = '180';
   
+  // if ($height === 180){
+  //   echo '身長' . $height . 'cmです。';
+  // } else{
+  //   echo '型が一致しません'; 
+  // }
 
-  if ($height === 180){
-    echo '身長' . $height . 'cmです。';
-  } else{
-    echo '型が一致しません'; 
+  $test_1 = '';
+
+  if(empty($test_1)){
+    echo '変数は空です';
   }
 
+  $test_2 = 1;
 
+  if(!empty($test_2)){
+    echo '変数は' . $test . 'です';
+  }
+
+  $math = 80;
+  $comment = ($math >= 80)? 'good' : 'not good';
+  echo $comment;
 ?>
