@@ -134,26 +134,56 @@
   //   'hobby' => 'キャンプ'
   // ];
 
-  $members = [
-    '本田' => [
-      'height' => 180,
-      'hobby' => 'サッカー'
-    ], 
-    '香川' => [
-      'height' => 189,
-      'hobby' => 'サッカー'
-    ]
-    ];
+  // $members = [
+  //   '本田' => [
+  //     'height' => 180,
+  //     'hobby' => 'サッカー'
+  //   ], 
+  //   '香川' => [
+  //     'height' => 189,
+  //     'hobby' => 'サッカー'
+  //   ]
+  //   ];
 
-  foreach($members as $member){
-    foreach($member as $key => $value){
-      echo $key . 'は' . $value . 'です';
-      echo '<br>';
-    };
-  };
+  // foreach($members as $member){
+  //   foreach($member as $key => $value){
+  //     echo $key . 'は' . $value . 'です';
+  //     echo '<br>';
+  //   };
+  // };
 
   // foreach($members as $key => $value){
   //   echo $key . 'は' . $value . 'です';
   //   echo '<br>';
   // };
+
+  for($i = 0; $i < 10; $i++){
+    if($i === 5){
+      break;
+    }
+    echo $i;
+  };
+
+  echo '<br>';
+
+  for($i = 0; $i < 10; $i++){
+    if($i === 5){
+      continue;
+    }
+    echo $i;
+  };
+
+  echo '<br>';
+
+  $j = 0;
+  while($j < 5){
+    echo $j;
+    $j++;
+  };
+
+
+
+
+
+
 ?>
