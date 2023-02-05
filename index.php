@@ -112,19 +112,48 @@
   //   echo '型が一致しません'; 
   // }
 
-  $test_1 = '';
+  // $test_1 = '';
 
-  if(empty($test_1)){
-    echo '変数は空です';
-  }
+  // if(empty($test_1)){
+  //   echo '変数は空です';
+  // }
 
-  $test_2 = 1;
+  // $test_2 = 1;
 
-  if(!empty($test_2)){
-    echo '変数は' . $test . 'です';
-  }
+  // if(!empty($test_2)){
+  //   echo '変数は' . $test . 'です';
+  // }
 
-  $math = 80;
-  $comment = ($math >= 80)? 'good' : 'not good';
-  echo $comment;
+  // $math = 80;
+  // $comment = ($math >= 80)? 'good' : 'not good';
+  // echo $comment;
+
+  // $members = [
+  //   'name' => '平田',
+  //   'height' => '162',
+  //   'hobby' => 'キャンプ'
+  // ];
+
+  $members = [
+    '本田' => [
+      'height' => 180,
+      'hobby' => 'サッカー'
+    ], 
+    '香川' => [
+      'height' => 189,
+      'hobby' => 'サッカー'
+    ]
+    ];
+
+  foreach($members as $member){
+    foreach($member as $key => $value){
+      echo $key . 'は' . $value . 'です';
+      echo '<br>';
+    };
+  };
+
+  // foreach($members as $key => $value){
+  //   echo $key . 'は' . $value . 'です';
+  //   echo '<br>';
+  // };
 ?>
