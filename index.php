@@ -231,4 +231,11 @@
   // $total = sumPrice(2, 3);
   // echo $total;
   // echo '<br>';
+
+  // $text = 'あいうえお';
+  // echo strlen($text);
+  // echo mb_strlen ($text);
+
+  $str = '文字列をちかんします。';
+  echo str_replace('ちかん', '置換', $str);
 ?>
