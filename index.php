@@ -193,42 +193,42 @@
   //     echo 'その他';
   // }
 
-  function test(){
-    echo 'テスト';
-  }
+  // function test(){
+  //   echo 'テスト';
+  // }
 
-  test();
+  // test();
 
-  echo '<br>';
+  // echo '<br>';
 
-  function getComment($str){
-    echo $str;
-  }
+  // function getComment($str){
+  //   echo $str;
+  // }
 
-  getComment('hello');
+  // getComment('hello');
 
-  echo '<br>';
+  // echo '<br>';
 
-  function getNumberOFComment(){
-    return 5;
-  }
+  // function getNumberOFComment(){
+  //   return 5;
+  // }
 
-  var_dump(getNumberOFComment());
-  echo '<br>';
+  // var_dump(getNumberOFComment());
+  // echo '<br>';
 
-  echo getNumberOFComment();
-  echo '<br>';
+  // echo getNumberOFComment();
+  // echo '<br>';
 
-  $num = getNumberOFComment();
-  echo $num; 
-  echo '<br>';
+  // $num = getNumberOFComment();
+  // echo $num; 
+  // echo '<br>';
 
-  function sumPrice($int_1, $int_2){
-    $int_3 = $int_1 + $int_2;
-    return $int_3;
-  }
+  // function sumPrice($int_1, $int_2){
+  //   $int_3 = $int_1 + $int_2;
+  //   return $int_3;
+  // }
 
-  $total = sumPrice(2, 3);
-  echo $total;
-  echo '<br>';
+  // $total = sumPrice(2, 3);
+  // echo $total;
+  // echo '<br>';
 ?>
