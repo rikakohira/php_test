@@ -236,6 +236,8 @@
   // echo strlen($text);
   // echo mb_strlen ($text);
 
-  $str = '文字列をちかんします。';
-  echo str_replace('ちかん', '置換', $str);
+  // $str = '文字列をちかんします。';
+  // echo str_replace('ちかん', '置換', $str);
+
+    
 ?>
