@@ -239,5 +239,28 @@
   // $str = '文字列をちかんします。';
   // echo str_replace('ちかん', '置換', $str);
 
-    
+  // $str = '指定した文字列で、分割します';
+
+  // echo '<pre>';
+  // var_dump(explode('、', $str));
+  // echo '<pre>';
+
+  //implode
+
+  // $str = '特定の文字列が含まれているか確認する';
+  // echo preg_match('/文字列/', $str);
+  
+  
+  // echo substr('abcde', 2);
+  // echo '<br>';
+
+  // echo substr('abcde', -2);
+  // echo '<br>';
+
+  // echo substr('abcde', -4, 2);
+  // echo '<br>';
+
+  // echo mb_substr('あいうえお', 2);
+
+  
 ?>
