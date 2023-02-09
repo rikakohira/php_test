@@ -262,5 +262,10 @@
 
   // echo mb_substr('あいうえお', 2);
 
-  
+  $array = ['りんご', 'みかん'];
+  array_push($array, 'ぶどう', 'みかん');
+
+  echo '<pre>';
+  var_dump($array);
+  echo '<pre>';
 ?>
