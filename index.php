@@ -285,17 +285,24 @@
 
     // var_dump(checkPostalCode($str));
 
-    $globalVariable = 'グルーバル変数です';
+    // $globalVariable = 'グルーバル変数です';
 
-    function checkScope(){
-      $localVariable = 'ローカル変数です';
-      echo $localVariable;
-      global $globalVariable;
-      echo $globalVariable;
-    }
+    // function checkScope(){
+    //   $localVariable = 'ローカル変数です';
+    //   echo $localVariable;
+    //   global $globalVariable;
+    //   echo $globalVariable;
+    // }
 
-    echo $globalVariable;
-    echo $localVariable;
+    // echo $globalVariable;
+    // echo $localVariable;
 
-    checkScope();
+    // checkScope();
+
+require __DIR__ . '/common/common.php';
+echo $commonVariable;
+commonTest();
+
+echo __FILE__;
+
 ?>
