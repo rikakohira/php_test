@@ -269,19 +269,33 @@
   // var_dump($array);
   // echo '<pre>';
 
-    $str = '123-4567';
+    // $str = '123-4567';
 
-    function checkPostalCode($str){
-      $replaced = str_replace('-', '', $str);
-      $length = strlen($replaced);
+    // function checkPostalCode($str){
+    //   $replaced = str_replace('-', '', $str);
+    //   $length = strlen($replaced);
 
-      var_dump($length);
-      if($length === 7){
-        return true;
-      }
-      return false;
+    //   var_dump($length);
+    //   if($length === 7){
+    //     return true;
+    //   }
+    //   return false;
       
+    // }
+
+    // var_dump(checkPostalCode($str));
+
+    $globalVariable = 'グルーバル変数です';
+
+    function checkScope(){
+      $localVariable = 'ローカル変数です';
+      echo $localVariable;
+      global $globalVariable;
+      echo $globalVariable;
     }
 
-    var_dump(checkPostalCode($str));
+    echo $globalVariable;
+    echo $localVariable;
+
+    checkScope();
 ?>
