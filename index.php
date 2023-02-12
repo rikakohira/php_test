@@ -262,10 +262,26 @@
 
   // echo mb_substr('あいうえお', 2);
 
-  $array = ['りんご', 'みかん'];
-  array_push($array, 'ぶどう', 'みかん');
+  // $array = ['りんご', 'みかん'];
+  // array_push($array, 'ぶどう', 'みかん');
 
-  echo '<pre>';
-  var_dump($array);
-  echo '<pre>';
+  // echo '<pre>';
+  // var_dump($array);
+  // echo '<pre>';
+
+    $str = '123-4567';
+
+    function checkPostalCode($str){
+      $replaced = str_replace('-', '', $str);
+      $length = strlen($replaced);
+
+      var_dump($length);
+      if($length === 7){
+        return true;
+      }
+      return false;
+      
+    }
+
+    var_dump(checkPostalCode($str));
 ?>
