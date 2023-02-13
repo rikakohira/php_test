@@ -5,11 +5,23 @@
 //   echo '<pre>';
 // }
 
-if(!empty($_POST)){
-  echo '<pre>';
-  var_dump($_POST); 
-  echo '<pre>';
+// if(!empty($_POST)){
+//   echo '<pre>';
+//   var_dump($_POST); 
+//   echo '<pre>';
+// }
+
+$pageFlag = 0;
+
+if(!empty($_POST['btm_confirm'])){
+  $pageFlag = 1;
 }
+if(!empty($_POST['btm_submit'])){
+  $pageFlag = 2;
+}
+
+
+
 
 ?>
 
@@ -18,17 +30,38 @@ if(!empty($_POST)){
 <head></head>
 <body>
 
-<form method="POST" action="input.php">
-  氏名  
-  <input type="text" name="your_name">
-  <br/>
-  <br/>
-  <input type="checkbox" name="sports[]" value="野球">野球
-  <input type="checkbox" name="sports[]" value="サッカー">サッカー
-  <input type="checkbox" name="sports[]" value="バスケ">バスケ
-  <br/>
-  <br/>
-  <input type="submit" value="送信">
-</form>
+<!-- 入力画面 -->
+<?php if($pageFlag === 0) : ?>
+  <form method="POST" action="input.php">
+    氏名  
+    <input type="text" name="name">
+    <br/>
+    メールアドレス
+    <input type="email" name="email">
+    <br/>
+    <input type="submit" name="btm_confirm" value="確認する">
+  </form>
+<?php endif; ?>
+
+<!-- 確認画面 -->
+<?php if($pageFlag === 1) : ?>
+  <form method="POST" action="input.php">
+    氏名  
+    <?php echo $_POST['name'] ;?>
+    <br/>
+    メールアドレス
+    <?php echo $_POST['email'] ;?>
+    <br/>
+    <input type="submit" name="btm_submit" value="送信する">
+    <input type="hidden"  name="name" value="<?php echo $_POST['name'] ;?>">
+    <input type="hidden"  name="email" value="<?php echo $_POST['email'] ;?>">
+  </form>
+<?php endif; ?>
+
+<!-- 完了画面 -->
+<?php if($pageFlag === 2) : ?>
+  送信が完了しました
+<?php endif; ?>
+
 </body>
 </html>
