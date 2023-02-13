@@ -299,10 +299,15 @@
 
     // checkScope();
 
-require __DIR__ . '/common/common.php';
-echo $commonVariable;
-commonTest();
+// require __DIR__ . '/common/common.php';
+// echo $commonVariable;
+// commonTest();
 
-echo __FILE__;
+// echo __FILE__;
+
+// $test = 123;
+echo $test;
+phpinfo();
+
 
 ?>
