@@ -1,4 +1,7 @@
 <?php
+
+header('X-FRAME-OPTIONS:DENY');
+
 // if(!empty($_GET)){
 //   echo '<pre>';
 //   var_dump($_GET); 
@@ -10,6 +13,10 @@
 //   var_dump($_POST); 
 //   echo '<pre>';
 // }
+
+function h($str){
+	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+}
 
 $pageFlag = 0;
 
@@ -30,10 +37,10 @@ if(!empty($_POST['btm_submit'])){
 <?php if($pageFlag === 0) : ?>
   <form method="POST" action="input.php">
     氏名  
-    <input type="text" name="name" value="<?php if(!empty($_POST['name'])){echo $_POST['name'];}?>">
+    <input type="text" name="name" value="<?php if(!empty($_POST['name'])){echo h($_POST['name']);}?>">
     <br/>
     メールアドレス
-    <input type="email" name="email" value="<?php if(!empty($_POST['email'])){echo $_POST['email'];}?>">
+    <input type="email" name="email" value="<?php if(!empty($_POST['email'])){echo h($_POST['email']);}?>">
     <br/>
     <input type="submit" name="btm_confirm" value="確認する">
   </form>
@@ -43,15 +50,15 @@ if(!empty($_POST['btm_submit'])){
 <?php if($pageFlag === 1) : ?>
   <form method="POST" action="input.php">
     氏名  
-    <?php echo $_POST['name'] ;?>
+    <?php echo h($_POST['name']) ;?>
     <br/>
     メールアドレス
-    <?php echo $_POST['email'] ;?>
+    <?php echo h($_POST['email']) ;?>
     <br/>
     <input type="submit" name="back" value="戻る">
     <input type="submit" name="btm_submit" value="送信する">
-    <input type="hidden"  name="name" value="<?php echo $_POST['name'] ;?>">
-    <input type="hidden"  name="email" value="<?php echo $_POST['email'] ;?>">
+    <input type="hidden"  name="name" value="<?php echo h($_POST['name']) ;?>">
+    <input type="hidden"  name="email" value="<?php echo h($_POST['email']) ;?>">
   </form>
 <?php endif; ?>
 
