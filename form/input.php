@@ -56,21 +56,33 @@ $token = $_SESSION['csrfToken']
     <br/>
     性別
     <input type="radio" name="gender" value="0" 
-    <?php if(isset($_POST['gender']) && $_POST['gender'] === '0')
-    { echo 'checked'; } ?>>男性
+      <?php if(isset($_POST['gender']) && $_POST['gender'] === '0')
+        { echo 'checked'; } ?>>男性
     <input type="radio" name="gender" value="1" 
-    <?php if(isset($_POST['gender']) && $_POST['gender'] === '1')
-    { echo 'checked'; } ?>>女性
+      <?php if(isset($_POST['gender']) && $_POST['gender'] === '1')
+        { echo 'checked'; } ?>>女性
     <br/>
     年齢
     <select name="age">
       <option value="">選択してください</option>
-      <option value="1" selected>~19歳</option>
-      <option value="2">20~29歳</option>
-      <option value="3">30~39歳</option>
-      <option value="4">40~49歳</option>
-      <option value="5">50~59歳</option>
-      <option value="6">60歳~</option>
+      <option value="1" 
+        <?php if(isset($_POST['age']) && $_POST['age'] === '1')
+          { echo 'selected';}?>>~19歳</option>
+      <option value="2"
+        <?php if(isset($_POST['age']) && $_POST['age'] === '2')
+          { echo 'selected';}?>>20~29歳</option>
+      <option value="3"
+        <?php if(isset($_POST['age']) && $_POST['age'] === '3')
+          { echo 'selected';}?>>30~39歳</option>
+      <option value="4"
+        <?php if(isset($_POST['age']) && $_POST['age'] === '4')
+          { echo 'selected';}?>>40~49歳</option>
+      <option value="5"
+        <?php if(isset($_POST['age']) && $_POST['age'] === '5')
+          { echo 'selected';}?>>50~59歳</option>
+      <option value="6"
+        <?php if(isset($_POST['age']) && $_POST['age'] === '6')
+          { echo 'selected';}?>>60歳~</option>
     </select>
     <br/>
     お問い合わせ内容
