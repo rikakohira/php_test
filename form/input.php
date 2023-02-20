@@ -2,6 +2,8 @@
 
 session_start();
 
+require 'validation.php';
+
 header('X-FRAME-OPTIONS:DENY');
 
 // if(!empty($_GET)){
@@ -10,19 +12,20 @@ header('X-FRAME-OPTIONS:DENY');
 //   echo '<pre>';
 // }
 
-if(!empty($_POST)){
-  echo '<pre>';
-  var_dump($_POST); 
-  echo '<pre>';
-}
+// if(!empty($_POST)){
+//   echo '<pre>';
+//   var_dump($_POST); 
+//   echo '<pre>';
+// }
 
 function h($str){
 	return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
 $pageFlag = 0;
+$errors = validation($_POST);
 
-if(!empty($_POST['btm_confirm'])){
+if(!empty($_POST['btm_confirm']) && empty($errors)){
   $pageFlag = 1;
 }
 if(!empty($_POST['btm_submit'])){
@@ -44,6 +47,18 @@ if(!isset($_SESSION_['csrfToken'])){
 }
 $token = $_SESSION['csrfToken']
 ?>
+
+<?php if(!empty($errors) && !empty($_POST['btn_confirm'])) : ?>
+  <?php echo '<ul>'; ?>
+    <?php 
+      foreach($errors as $error){
+        echo '<li>' . $error . '</li>';
+      }
+    ?>
+  <?php echo '</ul>'; ?>
+
+<?php endif ;?>
+  
   <form method="POST" action="input.php">
     氏名  
     <input type="text" name="name" value="<?php if(!empty($_POST['name'])){echo h($_POST['name']);}?>">
