@@ -26,11 +26,19 @@ $contactFile = '.contact.dat';
 
 
 // テキストファイルを配列形式で読み込む
-$allDate = file($contactFile);
+// $allDate = file($contactFile);
 
-foreach($allDate as $lineData){
-  $lines = explode(',', $lineData);   // カンマで区切る
-  echo $lines[0] . '<br>';
-  echo $lines[1] . '<br>';
-  echo $lines[2] . '<br>';
-}
+// foreach($allDate as $lineData){
+//   $lines = explode(',', $lineData);   // カンマで区切る
+//   echo $lines[0] . '<br>';
+//   echo $lines[1] . '<br>';
+//   echo $lines[2] . '<br>';
+// }
+
+$contents = fopen($contactFile, 'a+');
+
+$addText = '1行追記' .  "\n";
+
+fwrite($contents, $addText);
+
+fclose($contents);
