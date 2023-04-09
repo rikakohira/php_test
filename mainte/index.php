@@ -23,3 +23,16 @@ $result = $stmt->fetchall();
 echo '<pre>';
 var_dump($result);
 echo '</pre>';
+
+// トランザクション
+$pdo->beginTransaction();
+
+try {
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindValue('id', 4, PDO::PARAM_INT);
+  $stmt->execute();
+
+  $pdo->commit();
+} catch(PDOException $e) {
+  $pdo->rollback();
+}
