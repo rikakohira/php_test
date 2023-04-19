@@ -24,10 +24,10 @@ class Product{
 $product = new Product();
 
 $product->getInformation();
-echo '<br>'
+echo '<br>';
 
 $product->getProduct();
-echo '<br>'
+echo '<br>';
 
 $product->getNews();
-echo '<br>'
+echo '<br>';
